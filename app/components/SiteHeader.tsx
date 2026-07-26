@@ -1,3 +1,5 @@
+import { sitePath } from "@/lib/site-path";
+
 const navigation = [
   { href: "/wereldmeters", label: "Live meters" },
   { href: "/wereld", label: "Wereld" },
@@ -11,7 +13,7 @@ const navigation = [
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="World Pulse — home">
+      <a className="brand" href={sitePath("/")} aria-label="World Pulse — home">
         <span className="brand-mark" aria-hidden="true">
           <i />
           <i />
@@ -22,7 +24,7 @@ export function SiteHeader() {
 
       <nav className="desktop-nav" aria-label="Hoofdnavigatie">
         {navigation.map((item) => (
-          <a href={item.href} key={item.href}>
+          <a href={sitePath(item.href)} key={item.href}>
             {item.label}
           </a>
         ))}
@@ -35,11 +37,11 @@ export function SiteHeader() {
         </summary>
         <nav aria-label="Mobiele navigatie">
           {navigation.map((item) => (
-            <a href={item.href} key={item.href}>
+            <a href={sitePath(item.href)} key={item.href}>
               {item.label}
             </a>
           ))}
-          <a href="/over-de-site">Over de site</a>
+          <a href={sitePath("/over-de-site")}>Over de site</a>
         </nav>
       </details>
     </header>

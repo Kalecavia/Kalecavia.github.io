@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import { sitePath } from "@/lib/site-path";
 import "./globals.css";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kalecavia.github.io/world-pulse/"),
   title: {
     default: "World Pulse — De polsslag van de planeet",
     template: "%s | World Pulse",
@@ -21,9 +23,9 @@ export const metadata: Metadata = {
     "data visualisatie",
   ],
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: sitePath("/favicon.png"),
+    shortcut: sitePath("/favicon.png"),
+    apple: sitePath("/favicon.png"),
   },
   openGraph: {
     type: "website",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
       "Werelddata zijn niet zomaar cijfers. Ze zijn de realtime-achtige polsslag van één verbonden planeet.",
     images: [
       {
-        url: "/media/world-pulse-social.webp",
+        url: sitePath("/media/world-pulse-social.webp"),
         width: 1200,
         height: 630,
         alt: "Een gelaagde wereldmachine van datalijnen, energiestromen en lichtpunten.",
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
     title: "World Pulse — De polsslag van de planeet",
     description:
       "Een cinematografische datareis door de systemen die onze wereld vormen.",
-    images: ["/media/world-pulse-social.webp"],
+    images: [sitePath("/media/world-pulse-social.webp")],
   },
 };
 

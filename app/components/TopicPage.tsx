@@ -1,6 +1,7 @@
 import { indicatorById, sourceById, type Topic } from "@/data/world-data";
 import type { WorldometerCategoryId } from "@/data/worldometer-data";
 import { topicMedia } from "@/data/site-media";
+import { sitePath } from "@/lib/site-path";
 import { MediaStage } from "./MediaStage";
 import { MetricCard } from "./MetricCard";
 import { WorldometerCounterWall } from "./WorldometerCounters";
@@ -129,7 +130,7 @@ export function TopicPage({ topic }: { topic: Topic }) {
       </section>
 
       {topic.next ? (
-        <a className="next-chapter" href={topic.next.href}>
+        <a className="next-chapter" href={sitePath(topic.next.href)}>
           <span>Volgende laag</span>
           <strong>{topic.next.label}</strong>
           <i>→</i>

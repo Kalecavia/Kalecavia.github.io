@@ -5,6 +5,7 @@ import {
   WorldometerTickerRail,
 } from "../components/WorldometerCounters";
 import { mediaAssets } from "@/data/site-media";
+import { sitePath } from "@/lib/site-path";
 
 export const metadata: Metadata = {
   title: "63 lopende wereldtellers — World Pulse",
@@ -30,7 +31,7 @@ export default function WorldMetersPage() {
             <a className="primary-button" href="#alle-meters">
               Open alle tellers <span>↓</span>
             </a>
-            <a className="text-link" href="/bronnen">
+            <a className="text-link" href={sitePath("/bronnen")}>
               Hoe de rekensom werkt ↗
             </a>
           </div>

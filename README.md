@@ -100,7 +100,8 @@ npm run build
 npm run build:pages
 ```
 
-`build:pages` rendert alle negen publieke routes naar `pages-dist/` en kopieert
-de geoptimaliseerde scripts, beelden en videolagen. De workflow in
+`build:pages` rendert alle negen publieke routes naar `pages-dist/`, kopieert
+de geoptimaliseerde scripts, beelden en videolagen en gebruikt de projectbasis
+`/world-pulse/`. De workflow in
 `.github/workflows/deploy-pages.yml` valideert en publiceert iedere push naar
-`main` automatisch op `https://kalecavia.github.io/`.
+`main` automatisch op `https://kalecavia.github.io/world-pulse/`.

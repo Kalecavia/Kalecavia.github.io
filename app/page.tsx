@@ -8,6 +8,7 @@ import {
 } from "./components/WorldometerCounters";
 import { indicatorById } from "@/data/world-data";
 import { mediaAssets } from "@/data/site-media";
+import { sitePath } from "@/lib/site-path";
 
 export const metadata: Metadata = {
   title: "World Pulse — De realtime-achtige polsslag van de planeet",
@@ -48,7 +49,7 @@ export default function Home() {
               <a className="primary-button" href="#time-never-stops">
                 Start de reis <span>↓</span>
               </a>
-              <a className="text-link" href="/wereldmeters">
+              <a className="text-link" href={sitePath("/wereldmeters")}>
                 Open 63 lopende tellers ↗
               </a>
             </div>
@@ -74,7 +75,7 @@ export default function Home() {
             intro="Een snelle selectie uit alle acht thema’s. Op de volledige meterspagina staan alle 63 tellers met uitleg."
             limitPerCategory={2}
           />
-          <a className="meters-cta" href="/wereldmeters">
+          <a className="meters-cta" href={sitePath("/wereldmeters")}>
             <span>63 lopende tellers</span>
             <strong>Open het volledige wereldbeeld</strong>
             <i>→</i>
@@ -135,7 +136,7 @@ export default function Home() {
               <strong>{urbanShare.display}</strong>
               <small>{urbanShare.period}</small>
             </div>
-            <a className="chapter-link" href="/bevolking">
+            <a className="chapter-link" href={sitePath("/bevolking")}>
               Open bevolkingsdata <span>→</span>
             </a>
           </div>
@@ -171,7 +172,7 @@ export default function Home() {
                 <span>toegang tot elektriciteit</span>
               </article>
             </div>
-            <a className="chapter-link" href="/voedsel-en-water">
+            <a className="chapter-link" href={sitePath("/voedsel-en-water")}>
               Volg de hulpbronnenstroom <span>→</span>
             </a>
           </div>
@@ -198,7 +199,7 @@ export default function Home() {
               <strong>{emissions.display}</strong>
               <small>{emissions.unit}</small>
             </div>
-            <a className="chapter-link" href="/energie-en-uitstoot">
+            <a className="chapter-link" href={sitePath("/energie-en-uitstoot")}>
               Bekijk energie en uitstoot <span>→</span>
             </a>
           </div>
@@ -234,7 +235,7 @@ export default function Home() {
                 <span>{healthyLife.label}</span>
               </article>
             </div>
-            <a className="chapter-link" href="/gezondheid">
+            <a className="chapter-link" href={sitePath("/gezondheid")}>
               Ga naar menselijke uitkomsten <span>→</span>
             </a>
           </div>
@@ -258,25 +259,25 @@ export default function Home() {
               getal kan wel een deur naar het verhaal openen.
             </p>
             <div className="theme-links">
-              <a href="/wereldmeters">
+              <a href={sitePath("/wereldmeters")}>
                 <span>00</span>Live wereldmeters<i>↗</i>
               </a>
-              <a href="/wereld">
+              <a href={sitePath("/wereld")}>
                 <span>01</span>Wereldbeeld<i>↗</i>
               </a>
-              <a href="/bevolking">
+              <a href={sitePath("/bevolking")}>
                 <span>02</span>Bevolking<i>↗</i>
               </a>
-              <a href="/voedsel-en-water">
+              <a href={sitePath("/voedsel-en-water")}>
                 <span>03</span>Voedsel & water<i>↗</i>
               </a>
-              <a href="/energie-en-uitstoot">
+              <a href={sitePath("/energie-en-uitstoot")}>
                 <span>04</span>Energie & uitstoot<i>↗</i>
               </a>
-              <a href="/gezondheid">
+              <a href={sitePath("/gezondheid")}>
                 <span>05</span>Gezondheid<i>↗</i>
               </a>
-              <a href="/bronnen">
+              <a href={sitePath("/bronnen")}>
                 <span>06</span>Bronnen & methode<i>↗</i>
               </a>
             </div>

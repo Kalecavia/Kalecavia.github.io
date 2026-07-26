@@ -1,3 +1,5 @@
+import { sitePath } from "@/lib/site-path";
+
 export type MediaVariant =
   | "orbit"
   | "city"
@@ -20,8 +22,8 @@ export type MediaAsset = {
 
 export const mediaAssets = {
   world: {
-    poster: "/media/world-rich/world-orbit-poster.webp",
-    video: "/media/world-rich/world-orbit-flow.mp4",
+    poster: sitePath("/media/world-rich/world-orbit-poster.webp"),
+    video: sitePath("/media/world-rich/world-orbit-flow.mp4"),
     alt: "De aarde vanuit een lage baan met stadslicht langs de nachtzijde",
     eyebrow: "ORBITAL VIEW / 001",
     caption: "Eén aarde, maar niet voor iedereen dezelfde wereld.",
@@ -32,8 +34,8 @@ export const mediaAssets = {
       "Fotomaster: GPT Image · videolaag: Google Flow Pro, vanuit dezelfde 4K-referentie",
   },
   population: {
-    poster: "/media/world-rich/population-city-poster.webp",
-    video: "/media/world-rich/population-city.mp4",
+    poster: sitePath("/media/world-rich/population-city-poster.webp"),
+    video: sitePath("/media/world-rich/population-city.mp4"),
     alt: "Fotorealistische luchtfoto van een dicht verlichte metropool",
     eyebrow: "HUMAN DENSITY / 002",
     caption: "Een stad groeit straat voor straat, huis voor huis.",
@@ -43,8 +45,8 @@ export const mediaAssets = {
     credit: "Fotomaster: GPT Image · videolaag: Pexels / Alex Sanchez",
   },
   foodWater: {
-    poster: "/media/world-rich/food-water-poster.webp",
-    video: "/media/world-rich/food-water.mp4",
+    poster: sitePath("/media/world-rich/food-water-poster.webp"),
+    video: sitePath("/media/world-rich/food-water.mp4"),
     alt: "Fotorealistisch irrigatielandschap met landbouwvelden en waterbassins",
     eyebrow: "RESOURCE FLOW / 003",
     caption:
@@ -55,8 +57,8 @@ export const mediaAssets = {
     credit: "Fotomaster: GPT Image · videolaag: Pexels / Lê Cuộc",
   },
   energy: {
-    poster: "/media/world-rich/energy-grid-poster.webp",
-    video: "/media/world-rich/energy-grid.mp4",
+    poster: sitePath("/media/world-rich/energy-grid-poster.webp"),
+    video: sitePath("/media/world-rich/energy-grid.mp4"),
     alt: "Fotorealistische kustvlakte met windturbines en zonnepanelen",
     eyebrow: "ENERGY FIELD / 004",
     caption:
@@ -67,8 +69,8 @@ export const mediaAssets = {
     credit: "Fotomaster: GPT Image · videolaag: Pexels / Jakub Zerdzicki",
   },
   health: {
-    poster: "/media/world-rich/health-human-poster.webp",
-    video: "/media/world-rich/health-human.mp4",
+    poster: sitePath("/media/world-rich/health-human-poster.webp"),
+    video: sitePath("/media/world-rich/health-human.mp4"),
     alt: "Fotorealistische zorgmedewerkers en bewoners bij een lokale kliniek",
     eyebrow: "HUMAN OUTCOME / 005",
     caption:
@@ -79,7 +81,7 @@ export const mediaAssets = {
     credit: "Fotomaster: GPT Image · videolaag: Pexels / Andy Coffie",
   },
   sources: {
-    poster: "/media/world-rich/sources-archive-poster.webp",
+    poster: sitePath("/media/world-rich/sources-archive-poster.webp"),
     alt: "Fotorealistische onderzoeksruimte met kaarten, boeken en datadocumenten",
     eyebrow: "EVIDENCE ROOM / 006",
     caption:
@@ -90,7 +92,7 @@ export const mediaAssets = {
     credit: "Fotomaster: GPT Image",
   },
   studio: {
-    poster: "/media/world-rich/studio-method-poster.webp",
+    poster: sitePath("/media/world-rich/studio-method-poster.webp"),
     alt: "Fotorealistische ontwerpstudio met wereldkaart en datavisualisaties",
     eyebrow: "STORY LAB / 007",
     caption: "De techniek is het podium; de uitleg blijft het belangrijkste.",

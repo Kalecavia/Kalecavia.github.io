@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { mediaAssets } from "@/data/site-media";
+import { sitePath } from "@/lib/site-path";
 import { MediaStage } from "../components/MediaStage";
 
 export const metadata: Metadata = {
@@ -98,7 +99,7 @@ export default function AboutPage() {
             Op een tragere verbinding blijft een scherpe foto staan. Mobiel
             gebruikt bewust minder 3D-kracht.
           </p>
-          <a className="primary-button" href="/wereldmeters">
+          <a className="primary-button" href={sitePath("/wereldmeters")}>
             Open alle 63 tellers <span>→</span>
           </a>
         </div>

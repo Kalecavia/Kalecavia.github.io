@@ -1,8 +1,10 @@
+import { sitePath } from "@/lib/site-path";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <a className="brand footer-brand" href="/">
+        <a className="brand footer-brand" href={sitePath("/")}>
           <span className="brand-mark" aria-hidden="true">
             <i />
             <i />
@@ -13,9 +15,9 @@ export function SiteFooter() {
         <p>63 lopende tellers, uitgelegd in gewone taal.</p>
       </div>
       <div className="footer-links">
-        <a href="/wereldmeters">Alle wereldtellers</a>
-        <a href="/bronnen">Bronnen & methode</a>
-        <a href="/over-de-site">Over de site</a>
+        <a href={sitePath("/wereldmeters")}>Alle wereldtellers</a>
+        <a href={sitePath("/bronnen")}>Bronnen & methode</a>
+        <a href={sitePath("/over-de-site")}>Over de site</a>
         <a href="#top">Terug naar boven ↑</a>
       </div>
       <p className="footer-meta">
