@@ -151,7 +151,13 @@ export default function Home() {
           <div className="chapter-copy">
             <p className="eyebrow">Voedsel, water, energie</p>
             <h2>
-              Hulpbronnen volgen geen <em>landsgrenzen</em>.
+              Hulpbronnen volgen geen{" "}
+              <em>
+                lands
+                <wbr />
+                grenzen
+              </em>
+              .
             </h2>
             <p>
               Zonder water geen oogst. Zonder energie geen pomp, koeling of
@@ -217,7 +223,9 @@ export default function Home() {
           <div className="chapter-copy">
             <p className="eyebrow">Human reality</p>
             <h2>
-              Achter ieder wereldgemiddelde zit een <em>afstand</em>.
+              Achter ieder wereld
+              <wbr />
+              gemiddelde zit een <em>afstand</em>.
             </h2>
             <p>
               Schoon water, elektriciteit en goede zorg lijken vanzelfsprekend

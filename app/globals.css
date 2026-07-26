@@ -418,6 +418,7 @@ h3 {
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.92;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -3461,8 +3462,9 @@ h3 {
   }
 
   .story-chapter h2 {
-    max-width: 92%;
+    max-width: 100%;
     font-size: clamp(3rem, 14vw, 5.4rem);
+    text-wrap: balance;
   }
 
   .inline-stats,

@@ -59,6 +59,8 @@ test("server-renders the complete World Pulse home page", async () => {
   assert.match(html, /world-orbit-poster\.webp/);
   assert.match(html, /world-orbit-flow\.mp4/);
   assert.match(html, /<video\b/);
+  assert.match(html, /wereld<wbr\/>gemiddelde/);
+  assert.match(html, /lands<wbr\/>grenzen/);
   assert.match(html, /aria-label="Hoofdnavigatie"/);
   assert.match(html, /href="#main"/);
   assert.equal((html.match(/--wm-title-length:\d+/g) ?? []).length, 8);
@@ -139,6 +141,7 @@ test("keeps data and documentation explicit, with no starter preview", async () 
   assert.match(architecture, /prefers-reduced-motion/);
   assert.match(globalStyles, /container-type:\s*inline-size/);
   assert.match(globalStyles, /180cqw\s*\/\s*var\(--wm-title-length/);
+  assert.match(globalStyles, /overflow-wrap:\s*anywhere/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 
   const previewEntries = await readdir(
