@@ -141,10 +141,14 @@ test("keeps data and documentation explicit, with no starter preview", async () 
   assert.match(globalStyles, /180cqw\s*\/\s*var\(--wm-title-length/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 
-  assert.deepEqual(
-    await readdir(new URL("app/_sites-preview", projectRoot)),
-    [],
-  );
+  const previewEntries = await readdir(
+    new URL("app/_sites-preview", projectRoot),
+  ).catch((error) => {
+    if (error?.code === "ENOENT") return [];
+    throw error;
+  });
+
+  assert.deepEqual(previewEntries, []);
 });
 
 test("ships an optimized social preview and valid external source URLs", async () => {
